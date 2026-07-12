@@ -18,21 +18,19 @@
 }
 
 /*
- * The editor canvas is an iframe with no access to the front-end's
- * html.dark toggle, so we follow the OS/browser dark-mode preference
- * instead, using the same palette as the html.dark block in main.css.
+ * Manual light/dark toggle (see assets/js/editor-theme-toggle.js). The
+ * editor defaults to light; toggling adds this class to the iframe body,
+ * using the same palette as the html.dark block in main.css.
  */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --editor-color-primary: #ef4444;
-    --editor-color-text: #f3f3f3;
-    --editor-color-text-muted: #d1d5db;
-    --editor-color-border: #374151;
-    --editor-color-background: #1a1a1a;
-    --editor-color-surface: #2d2d2d;
-    --editor-color-blockquote: #b0b0b0;
-    --editor-color-link-underline: rgba(252, 165, 165, 0.3);
-  }
+.editor-styles-wrapper.rz-editor-theme-dark {
+  --editor-color-primary: #ef4444;
+  --editor-color-text: #f3f3f3;
+  --editor-color-text-muted: #d1d5db;
+  --editor-color-border: #374151;
+  --editor-color-background: #1a1a1a;
+  --editor-color-surface: #2d2d2d;
+  --editor-color-blockquote: #b0b0b0;
+  --editor-color-link-underline: rgba(252, 165, 165, 0.3);
 }
 
 .editor-styles-wrapper {

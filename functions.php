@@ -156,6 +156,20 @@ function rz_codes_setup() {
 add_action( 'after_setup_theme', 'rz_codes_setup' );
 
 /**
+ * Block editor: manual light/dark toggle for the writing canvas (defaults to light).
+ */
+function rz_codes_enqueue_block_editor_assets() {
+	wp_enqueue_script(
+		'rz-codes-editor-theme-toggle',
+		get_template_directory_uri() . '/assets/js/editor-theme-toggle.js',
+		array( 'wp-plugins', 'wp-edit-post', 'wp-element', 'wp-i18n' ),
+		RZ_CODES_THEME_VERSION,
+		true
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'rz_codes_enqueue_block_editor_assets' );
+
+/**
  * Customizer: main site URL for header/footer links.
  *
  * @param WP_Customize_Manager $wp_customize Customizer.
