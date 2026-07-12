@@ -85,6 +85,73 @@ function rz_codes_setup() {
 	add_theme_support( 'responsive-embeds' );
 	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'automatic-feed-links' );
+
+	// Block editor: use the site's Poppins typography and a Medium-style writing layout.
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'assets/css/editor-style.css' );
+	add_theme_support( 'align-wide' );
+
+	add_theme_support(
+		'editor-color-palette',
+		array(
+			array(
+				'name'  => __( 'Primary red', 'rz-codes-blog' ),
+				'slug'  => 'primary',
+				'color' => '#dc2626',
+			),
+			array(
+				'name'  => __( 'Secondary yellow', 'rz-codes-blog' ),
+				'slug'  => 'secondary',
+				'color' => '#facc15',
+			),
+			array(
+				'name'  => __( 'Text', 'rz-codes-blog' ),
+				'slug'  => 'text',
+				'color' => '#1a1a1a',
+			),
+			array(
+				'name'  => __( 'Muted text', 'rz-codes-blog' ),
+				'slug'  => 'text-muted',
+				'color' => '#6b7280',
+			),
+			array(
+				'name'  => __( 'Background', 'rz-codes-blog' ),
+				'slug'  => 'background',
+				'color' => '#f3f3f3',
+			),
+			array(
+				'name'  => __( 'Surface', 'rz-codes-blog' ),
+				'slug'  => 'surface',
+				'color' => '#ffffff',
+			),
+		)
+	);
+
+	add_theme_support(
+		'editor-font-sizes',
+		array(
+			array(
+				'name' => __( 'Small', 'rz-codes-blog' ),
+				'slug' => 'small',
+				'size' => 14,
+			),
+			array(
+				'name' => __( 'Normal', 'rz-codes-blog' ),
+				'slug' => 'normal',
+				'size' => 18,
+			),
+			array(
+				'name' => __( 'Large', 'rz-codes-blog' ),
+				'slug' => 'large',
+				'size' => 24,
+			),
+			array(
+				'name' => __( 'Huge', 'rz-codes-blog' ),
+				'slug' => 'huge',
+				'size' => 32,
+			),
+		)
+	);
 }
 add_action( 'after_setup_theme', 'rz_codes_setup' );
 
