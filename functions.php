@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'RZ_CODES_THEME_VERSION', '1.2.0' );
+define( 'RZ_CODES_THEME_VERSION', '1.2.1' );
 
 /**
  * Main portfolio / marketing site URL (Gatsby). Blog nav links point here except Blog.
